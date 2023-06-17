@@ -8,16 +8,26 @@
 number = int(input("Введите шестизначное число: "))
 # number = 385916
 
+f_data_validation = True
+
+number_cnt = len(str(number))
+if number_cnt % 2 != 0 or number_cnt < 2: f_data_validation = False
+
 part1 = 0
 part2 = 0
 i = 1
+if f_data_validation:
+    half = number_cnt // 2
+    
+    while number > 0:
+        if i > half:
+            part1 += number % 10
+        else:
+            part2 += number % 10
+        number //= 10
+        i += 1
 
-while number > 0:
-    if i > 3:
-        part1 += number % 10
-    else:
-        part2 += number % 10
-    number //= 10
-    i += 1
-
-print("yes" if part1 == part2 else "no")
+    # print(half, part1, part2)
+    print("yes" if part1 == part2 else "no")
+else:
+    print("Ошибка! Введите корректное число")
