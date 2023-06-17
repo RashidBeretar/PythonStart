@@ -4,3 +4,20 @@
 
 # 385916 -> yes
 # 123456 -> no
+
+number = int(input("Введите шестизначное число: "))
+# number = 385916
+
+part1 = 0
+part2 = 0
+i = 1
+
+while number > 0:
+    if i > 3:
+        part1 += number % 10
+    else:
+        part2 += number % 10
+    number //= 10
+    i += 1
+
+print("yes" if part1 == part2 else "no")
