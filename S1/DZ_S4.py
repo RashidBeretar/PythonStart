@@ -42,10 +42,10 @@ def T24():
 
     max = 0
     for i in range(n):
-        # r_i = i + 1 if i != n else 0
         r_i = 0 if i == n - 1 else i + 1
-        print(r_i)
-        # new_max = n[i - 1] + n[i] + n[r_i]
-        # if new_max > max: max = max
+        new_max = n_ar[i - 1] + n_ar[i] + n_ar[r_i]
+        if new_max > max: max = new_max
+        
+    print(max)
 
 T24()
