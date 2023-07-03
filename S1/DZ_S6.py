@@ -19,7 +19,8 @@ def T30():
 # меньше заданного минимума и не больше заданного
 # максимума)
 def find_ind_el_belong_range(input_ar, minmin, maxmax):
-    return [i for i in range(len(input_ar)) if input_ar[i] >= minmin and input_ar[i] <= maxmax]
+    # return [i for i in range(len(input_ar)) if input_ar[i] >= minmin and input_ar[i] <= maxmax]
+    return [i for i in range(len(input_ar)) if maxmax >= input_ar[i] >= minmin]
 
 from random import randint
 def T32():
