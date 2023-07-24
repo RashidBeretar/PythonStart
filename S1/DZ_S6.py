@@ -5,12 +5,14 @@
 def arithmetic_progres_ar(a1, d, n):
     return [a1 + (i - 1) * d for i in range(1, n + 1)]
 
+
 def T30():
     a1 = int(input("Введите первый элемент: "))
     d = int(input("Введите разность: "))
     n = int(input("Введите количество элементов: "))
     
     print(arithmetic_progres_ar(a1, d, n))
+
 
 # T30()
 
@@ -21,6 +23,7 @@ def T30():
 def find_ind_el_belong_range(input_ar, minmin, maxmax):
     # return [i for i in range(len(input_ar)) if input_ar[i] >= minmin and input_ar[i] <= maxmax]
     return [i for i in range(len(input_ar)) if maxmax >= input_ar[i] >= minmin]
+
 
 from random import randint
 def T32():
